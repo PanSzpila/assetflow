@@ -1,0 +1,29 @@
+# Node
+node_modules/
+.next/
+out/
+dist/
+*.tsbuildinfo
+npm-debug.log*
+
+# Java / Maven
+**/target/
+.mvn/wrapper/maven-wrapper.jar
+
+# Daml generated/build artefacts
+**/.daml/
+**/daml.yaml.lock
+**/*.dar
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+application-local.yml
+application-local.yaml
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

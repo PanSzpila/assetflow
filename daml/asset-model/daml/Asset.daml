@@ -1,0 +1,23 @@
+module Asset where
+
+import DA.Date (Date)
+
+-- Stage 1 starter only. Authorization and visibility rules must be reviewed
+-- and covered by scenario tests before this model is considered complete.
+template Asset
+  with
+    issuer : Party
+    owner : Party
+    assetId : Text
+    assetType : Text
+    description : Text
+    createdOn : Date
+  where
+    signatory issuer, owner
+    ensure assetId /= ""
+    choice Transfer : ContractId Asset
+      with
+        newOwner : Party
+      controller owner
+      do
+        create this with owner = newOwner

@@ -1,0 +1,14 @@
+{
+  "name": "assetflow",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Canton/Daml tokenized asset and DvP portfolio project",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @assetflow/web",
+    "build": "npm run build --workspace @assetflow/web",
+    "lint": "npm run lint --workspace @assetflow/web"
+  }
+}
